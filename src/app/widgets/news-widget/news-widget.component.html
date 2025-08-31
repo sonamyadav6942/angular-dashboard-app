@@ -1,0 +1,17 @@
+<div class="news-card">
+  <div class="news-header">
+    <h3>Top News</h3>
+  </div>
+
+  <ul class="news-list">
+    <li *ngFor="let a of articles" class="news-item">
+      <a [href]="a.url" target="_blank" rel="noopener">
+        <div class="title">{{ a.title }}</div>
+        <div class="meta">
+          {{ a.source.name }} • {{ a.publishedAt | date: 'short' }}
+
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

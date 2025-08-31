@@ -1,0 +1,28 @@
+.quote-card {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0); // Purple gradient
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  }
+
+  .quote-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .quote-author {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.9;
+  }
+}

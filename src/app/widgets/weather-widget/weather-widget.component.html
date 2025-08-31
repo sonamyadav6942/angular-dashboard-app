@@ -1,0 +1,34 @@
+<div class="weather-card">
+  <div class="controls">
+    <input type="text" [(ngModel)]="city" placeholder="City (e.g. Bengaluru)" />
+    <button (click)="fetchByCity()">Get City Weather</button>
+
+    <span class="sep">or</span>
+
+    <input type="text" [(ngModel)]="pincode" placeholder="PIN (e.g. 110001)" />
+    <button (click)="fetchByPincode()">Get PIN Weather</button>
+  </div>
+
+  <div *ngIf="loading" class="status">Fetching India weather…</div>
+  <div *ngIf="error" class="status error">{{ error }}</div>
+
+  <div *ngIf="weatherData" class="content">
+    <div class="top">
+      <div>
+        <h3>{{ weatherData.name }}, {{ country }}</h3>
+        <div class="desc">
+          <img [src]="iconUrl(weatherData.weather[0].icon)" [alt]="weatherData.weather[0].main" />
+          <span>{{ weatherData.weather[0].main }} — {{ weatherData.weather[0].description }}</span>
+        </div>
+      </div>
+      <div class="temp">{{ weatherData.main.temp | number:'1.0-0' }}°C</div>
+    </div>
+
+    <div class="grid">
+      <div>Feels like: <b>{{ weatherData.main.feels_like | number:'1.0-0' }}°C</b></div>
+      <div>Humidity: <b>{{ weatherData.main.humidity }}%</b></div>
+      <div>Wind: <b>{{ weatherData.wind.speed }} m/s</b></div>
+      <div>Pressure: <b>{{ weatherData.main.pressure }} hPa</b></div>
+    </div>
+  </div>
+</div>

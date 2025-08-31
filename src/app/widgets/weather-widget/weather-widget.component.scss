@@ -1,0 +1,103 @@
+.weather-card {
+  background: linear-gradient(135deg, #667db6, #0082c8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      flex: 1 1 150px;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .sep {
+      align-self: center;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+
+  .status {
+    margin: 10px 0;
+    font-size: 1rem;
+
+    &.error {
+      color: #ffbaba;
+      font-weight: bold;
+    }
+  }
+
+  .content {
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 0 0 5px;
+      }
+
+      .desc {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      .temp {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+
+      div {
+        font-size: 0.95rem;
+
+        b {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

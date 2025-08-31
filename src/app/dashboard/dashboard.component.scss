@@ -1,0 +1,46 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f5f7fa; 
+}
+
+.widget-card {
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.clock-widget {
+  background: linear-gradient(135deg, #4facfe, #00f2fe); // Blue → Cyan
+}
+
+.weather-widget {
+  background: linear-gradient(135deg, #667db6, #0082c8); // Deep Blue → Sky Blue
+}
+
+.news-widget {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3); // Coral Pink → Soft Pink
+}
+
+.quote-widget {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0); // Violet → Deep Purple
+}
+
+.todo-widget {
+  background: linear-gradient(135deg, #43e97b, #38f9d7); // Fresh Green → Aqua Cyan
+}
